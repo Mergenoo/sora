@@ -67,8 +67,13 @@ const onKey = (e: KeyboardEvent) => {
 // Scrollbar drag, touch and anything else that moves the page without a wheel event: react to the first
 // movement so the page can never rest half way through the hero.
 let lastY = 0
+const atTop = ref(true)
+const reduceMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
+const goDown = () => { if (assist(1)) return; document.getElementById('shop')?.scrollIntoView({ behavior: reduceMotion() ? 'auto' : 'smooth', block: 'start' }) }
+const goUp = () => { if (assist(-1)) return; window.scrollTo({ top: 0, behavior: reduceMotion() ? 'auto' : 'smooth' }) }
 const onScroll = () => {
   const y = window.scrollY
+  atTop.value = y < 8
   const dy = y - lastY
   lastY = y
   if (gliding || Math.abs(dy) < 1) return
@@ -76,6 +81,7 @@ const onScroll = () => {
 }
 onMounted(() => {
   lastY = window.scrollY
+  atTop.value = lastY < 8
   window.addEventListener('wheel', onWheel, { passive: true })
   window.addEventListener('keydown', onKey)
   window.addEventListener('scroll', onScroll, { passive: true })
@@ -108,10 +114,18 @@ const badges = ['delivery', 'pay', 'pickup'] as const
             </div>
           </div>
 
-          <div class="scene-card mt-8 flex justify-center md:mt-10 lg:mt-0">
+          <div class="scene-card relative mt-8 flex justify-center md:mt-10 lg:mt-0">
+            <div class="absolute left-full top-1/2 z-10 ml-6 hidden -translate-y-1/2 flex-col gap-2 text-[rgb(var(--c-on-sky))] lg:flex">
+              <button type="button" class="carousel-btn !text-[rgb(var(--c-on-sky))]" :disabled="atTop" :aria-label="t('a11y.scrollUp')" @click="goUp">
+                <svg viewBox="0 0 48 92" width="48" height="92" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><circle cx="24" cy="68" r="22" /><path d="M24 68V2M20 2h8" /></svg>
+              </button>
+              <button type="button" class="carousel-btn !text-[rgb(var(--c-on-sky))]" :aria-label="t('a11y.scrollDown')" @click="goDown">
+                <svg viewBox="0 0 48 92" width="48" height="92" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><circle cx="24" cy="24" r="22" /><path d="M24 24v66M20 90h8" /></svg>
+              </button>
+            </div>
             <article class="hero-card glass w-full max-w-[520px] overflow-hidden !rounded-b-none border-b-0 px-4 pt-4" :aria-label="t('hero.featured')">
               <div class="card-img overflow-hidden rounded-[28px]">
-                <NuxtPicture :src="feat.src" :alt="l(feat.alt)" :width="feat.width" :height="feat.height" sizes="xs:360px sm:480px" loading="eager" :img-attrs="{ class: 'aspect-[16/10] w-full object-cover object-[50%_36%]' }" />
+                <NuxtPicture :src="feat.src" :alt="l(feat.alt)" :width="feat.width" :height="feat.height" sizes="xs:360px sm:480px" loading="eager" :img-attrs="{ class: 'aspect-[5/4] w-full object-cover object-[50%_62%]' }" />
               </div>
               <div class="card-info relative z-10 -mt-14 rounded-[24px] bg-surface/90 p-3 text-center text-ink backdrop-blur">
                 <p class="text-[15px] font-semibold">{{ l(featured.name) }}</p>

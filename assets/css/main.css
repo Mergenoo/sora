@@ -195,8 +195,8 @@ html[lang^='mn'] .sky-title { font-size: clamp(2.3rem, 1.2rem + 3.9vw, 4.6rem); 
     .scene-pin.sky-hero { position: sticky; top: 0; height: 100svh; overflow: hidden; }
     .scene-pin > .wrap { position: relative; height: 100%; max-width: none; padding: 0; }
     .scene-top { position: absolute; left: 0; right: 0; top: 0; z-index: 4; padding: 96px max(16px, calc((100% - 1240px) / 2 + 32px)) 0; }
-    .scene-wash { display: block; position: absolute; z-index: 1; left: calc(50% - 244px); right: calc(50% - 244px); top: calc(max(300px, 100svh - 470px) + 16px); bottom: 0; background: rgb(var(--c-bg)); border-radius: 28px 28px 0 0; pointer-events: none; transform-origin: 50% 100%; will-change: transform; }
-    .scene-card { position: absolute; left: 50%; top: max(300px, calc(100svh - 470px)); z-index: 3; width: min(520px, calc(100% - 32px)); transform: translateX(-50%); }
+    .scene-wash { display: block; position: absolute; z-index: 1; left: calc(50% - 244px); right: calc(50% - 244px); top: calc(max(300px, 100svh - 555px) + 16px); bottom: 0; background: rgb(var(--c-bg)); border-radius: 28px 28px 0 0; pointer-events: none; transform-origin: 50% 100%; will-change: transform; }
+    .scene-card { position: absolute; left: 50%; top: max(300px, calc(100svh - 555px)); z-index: 3; width: min(520px, calc(100% - 32px)); transform: translateX(-50%); }
     .scene-card .hero-card { max-width: none; }
     /* the shop slides up over the white stage once the white has filled the screen */
     .scene + #shop { position: relative; z-index: 5; margin-top: -48svh; }

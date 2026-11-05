@@ -64,6 +64,8 @@
     "filters": "Бүтээгдэхүүний шүүлтүүр",
     "results": "Үр дүн",
     "quickView": "{name} хурдан үзэх",
+    "scrollUp": "Дээш гүйлгэх",
+    "scrollDown": "Доош гүйлгэх",
     "prevSlide": "Өмнөх",
     "nextSlide": "Дараах",
     "prevProducts": "Өмнөх бүтээгдэхүүн",

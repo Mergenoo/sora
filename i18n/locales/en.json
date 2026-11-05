@@ -64,6 +64,8 @@
     "filters": "Product filters",
     "results": "Results",
     "quickView": "Quick view of {name}",
+    "scrollUp": "Scroll up",
+    "scrollDown": "Scroll down",
     "prevSlide": "Previous",
     "nextSlide": "Next",
     "prevProducts": "Previous products",

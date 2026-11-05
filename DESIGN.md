@@ -213,6 +213,9 @@ Square. Buttons, inputs, chips, cards, panels, dialogs, product images and the l
 - **Focus:** the global 3px amber outline with 3px offset.
 - **Error:** border turns Alert Red with a short red message beneath.
 
+### Hero scroll cue
+Beside the hero product (large screens only) sit two vertical circle-and-line arrows, the carousel arrows turned 90 degrees, in Sky Paper white: up (dimmed at the very top) and down. Down glides to the shop and up returns to the top; with reduced motion they jump instead. They tell visitors the hero scrolls on.
+
 ### Shop filters
 The sidebar (and the phone sheet) scrolls on its own when taller than the screen. After the product filters comes an open "Иж бүрдэл" group that links to each kit on the kits page.
 
