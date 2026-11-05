@@ -1,0 +1,28 @@
+{
+  "name": "sora-skin",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "npm run check:content && nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "test": "vitest run",
+    "check:content": "node --experimental-strip-types scripts/check-content.ts",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "^5.3.0",
+    "@nuxt/image": "^2.2.1",
+    "@nuxtjs/i18n": "^9.5.6",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "nuxt": "^3.21.11",
+    "vue": "^3.5.44",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "vitest": "^5.1.0",
+    "vue-tsc": "^3.3.14"
+  }
+}

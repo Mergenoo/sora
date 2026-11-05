@@ -1,0 +1,12 @@
+node_modules
+.nuxt
+.output
+.env
+dist
+
+# local tooling, not part of the site
+.agents/
+.claude/skills/
+.codex/
+.impeccable/config.local.json
+.DS_Store

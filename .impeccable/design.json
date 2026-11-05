@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05T00:00:00Z",
+  "title": "Design System: Sora Skin",
+  "extensions": {
+    "colorMeta": {
+      "brand-blue": {
+        "role": "primary",
+        "displayName": "Clear Sky Blue",
+        "canonical": "#1760C4",
+        "tonalRamp": [
+          "#0A2B59",
+          "#0F4192",
+          "#1760C4",
+          "#3F7ED6",
+          "#6C9FE2",
+          "#97BCEC",
+          "#C2D8F4",
+          "#E6EFFA"
+        ]
+      },
+      "focus-amber": {
+        "role": "status",
+        "displayName": "Focus Amber",
+        "canonical": "#C46210",
+        "tonalRamp": [
+          "#4A2403",
+          "#76390A",
+          "#9E4E0D",
+          "#C46210",
+          "#DE8238",
+          "#EAA469",
+          "#F3C8A0",
+          "#FAE6D3"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Ink",
+        "canonical": "#11141A",
+        "tonalRamp": [
+          "#05060A",
+          "#11141A",
+          "#2A2F38",
+          "#454B55",
+          "#5B616B",
+          "#9CA1AA",
+          "#D1D4DA",
+          "#F3F4F6"
+        ]
+      },
+      "page-white": {
+        "role": "neutral",
+        "displayName": "Page White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#C9CDD3",
+          "#D9DCE1",
+          "#E5E7EB",
+          "#EDEEF1",
+          "#F3F4F6",
+          "#F8F9FA",
+          "#FCFCFD",
+          "#FFFFFF"
+        ]
+      },
+      "sky-tint": {
+        "role": "neutral",
+        "displayName": "Sky Tint",
+        "canonical": "#E0ECFC",
+        "tonalRamp": [
+          "#9FBDE8",
+          "#B7CFF0",
+          "#C4DAF8",
+          "#D3E4FA",
+          "#E0ECFC",
+          "#EAF2FD",
+          "#F3F8FE",
+          "#FAFCFF"
+        ]
+      },
+      "sky-fill": {
+        "role": "primary",
+        "displayName": "Sky Fill",
+        "canonical": "#C4DAF8",
+        "tonalRamp": [
+          "#7FA6DC",
+          "#9BBBE8",
+          "#B0CBF1",
+          "#C4DAF8",
+          "#D3E4FA",
+          "#E0ECFC",
+          "#EEF4FD",
+          "#FAFCFF"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page H1; hero title is larger, Mongolian stepped down."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section H2."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card and product names."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text, about 68ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Nav links, perk lines, short card text."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Product subtitles, key ingredients, pack size, quick-view link."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hairline",
+        "value": "0 1px 0 rgb(11 42 85 / .08)",
+        "purpose": "The only card edge. No elevation shadows."
+      }
+    ],
+    "motion": [
+      {
+        "name": "blur-in",
+        "value": ".9s cubic-bezier(.33, 0, .2, 1)",
+        "purpose": "Hero text entrance, once on load."
+      },
+      {
+        "name": "answer",
+        "value": ".25s cubic-bezier(.2,.7,.2,1)",
+        "purpose": "Drawer and routine steps responding to the shopper."
+      },
+      {
+        "name": "state",
+        "value": ".15s ease",
+        "purpose": "Button colour and press transitions."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main action: add to bag, checkout, order.",
+      "html": "<button class=\"ds-btn-primary\">Add to bag</button>",
+      "css": ".ds-btn-primary { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:12px 28px; border-radius:999px; border:1.5px solid transparent; background:#0B2A55; color:#F6F2EC; font:600 1rem/1.2 'Manrope Variable', system-ui, sans-serif; cursor:pointer; transition:background-color .15s, transform .12s; } .ds-btn-primary:hover { filter:brightness(1.12); } .ds-btn-primary:active { transform:translateY(1px); } .ds-btn-primary:focus-visible { outline:3px solid #C46210; outline-offset:3px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action with a navy outline.",
+      "html": "<button class=\"ds-btn-ghost\">View kit</button>",
+      "css": ".ds-btn-ghost { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:12px 28px; border-radius:999px; border:1.5px solid #0B2A55; background:transparent; color:#0B2A55; font:600 1rem/1.2 'Manrope Variable', system-ui, sans-serif; cursor:pointer; } .ds-btn-ghost:hover { background:#E2DAD0; } .ds-btn-ghost:focus-visible { outline:3px solid #C46210; outline-offset:3px; }"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Shop filter; fills navy when pressed.",
+      "html": "<button class=\"ds-chip\" aria-pressed=\"true\">Moisturisers</button>",
+      "css": ".ds-chip { min-height:44px; padding:8px 20px; border-radius:999px; border:1.5px solid #0B2A55; background:transparent; color:#0B2A55; font:600 .95rem 'Manrope Variable', system-ui, sans-serif; cursor:pointer; } .ds-chip[aria-pressed='true'] { background:#0B2A55; color:#F6F2EC; } .ds-chip:focus-visible { outline:3px solid #C46210; outline-offset:3px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Pill input used in checkout and newsletter.",
+      "html": "<input class=\"ds-input\" placeholder=\"Phone number\">",
+      "css": ".ds-input { width:100%; min-height:48px; padding:10px 20px; border-radius:999px; border:1.5px solid rgba(11,42,85,.4); background:#FCFAF7; color:#0B2A55; font:inherit; } .ds-input:focus-visible { outline:3px solid #C46210; outline-offset:3px; }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Flat cushion-round container with a hairline.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-well\"></div><h3>Barrier cream</h3><p>Rich daily moisture</p></article>",
+      "css": ".ds-card { background:#FCFAF7; border-radius:28px; box-shadow:0 1px 0 rgba(11,42,85,.08); padding:16px; color:#0B2A55; font-family:'Manrope Variable', system-ui, sans-serif; } .ds-well { aspect-ratio:1; border-radius:20px; background:#E2DAD0; } .ds-card h3 { margin:16px 0 4px; font-size:17px; font-weight:700; } .ds-card p { margin:0; font-size:14px; color:#4F5B72; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "description": "Header link on the brand bar.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\">Shop</a><a href=\"#\">Kits</a><a href=\"#\">FAQ</a></nav>",
+      "css": ".ds-nav { display:flex; gap:4px; padding:0 12px; background:#1760C4; border-radius:999px; } .ds-nav a { display:inline-flex; align-items:center; min-height:44px; padding:0 12px; color:#F7F9FC; font:600 15px 'Manrope Variable', system-ui, sans-serif; text-decoration:none; } .ds-nav a:hover { text-decoration:underline; } .ds-nav a:focus-visible { outline:3px solid #C46210; outline-offset:3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Winter Sky",
+    "overview": "Sora looks like clear, cold air over Ulaanbaatar: a bright blue sky photograph at the top, then pale ice-blue pages with deep navy type. Everything is calm, bright and trustworthy. Corners are soft, surfaces are quiet, and the one confident dark note is navy. The system is flat and tonal; depth comes from tint and radius, never drop shadows.",
+    "keyCharacteristics": [
+      "Pale ice-blue pages, white-ish cards, navy ink and a single bright brand blue.",
+      "Pill buttons, fields and chips; cushion-round cards (28px) and panels (40px).",
+      "Flat by default; glass blur only on the hero.",
+      "Phone-first: 48px touch targets, 16px gutters, light imagery.",
+      "Motion is rare and purposeful, always disabled under reduced-motion."
+    ],
+    "rules": [
+      {
+        "name": "The One Hue Rule",
+        "body": "One blue outside the hero; everything else is white, grey or ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Amber Is Focus Rule",
+        "body": "Amber appears nowhere except :focus-visible.",
+        "section": "colors"
+      },
+      {
+        "name": "The Brand Is A Surface Rule",
+        "body": "Brand blue fills areas; body text and controls use navy.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cyrillic First Rule",
+        "body": "Every type decision is checked with Mongolian copy, including Ө and ү, before English.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "No box-shadows for elevation. A new surface is distinguished by tone and radius.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Glass Is Hero-Only Rule",
+        "body": "Backdrop blur appears only on the sky hero.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep every neutral in the blue family and text at Deep Winter Navy (#0B2A55) for AA contrast.",
+      "Do use pill radius (999px) for all buttons, fields and chips, 28px for cards and 40px for panels.",
+      "Do keep cards flat with tone and radius for depth.",
+      "Do test layouts with Mongolian strings, including Ө and ү, at every weight.",
+      "Do keep touch targets at 44px or more and the 3px amber focus ring visible everywhere.",
+      "Do wrap every animation in prefers-reduced-motion: no-preference."
+    ],
+    "donts": [
+      "Don't add drop shadows, gradients on text, or grey/beige neutrals.",
+      "Don't use amber or red for decoration; they are focus and error only.",
+      "Don't use backdrop blur outside the sky hero.",
+      "Don't use en or em dashes in copy; check:content fails the build on them.",
+      "Don't hardcode colours in components; use the --c-* tokens and Tailwind colour names."
+    ]
+  }
+}

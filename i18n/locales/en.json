@@ -1,0 +1,446 @@
+{
+  "meta": {
+    "home": {
+      "title": "Skincare for cold, dry winters",
+      "description": "Skincare for Mongolian winters: clear morning and evening routines, honest ingredient notes, delivery across Mongolia."
+    },
+    "shop": {
+      "title": "Shop skincare",
+      "description": "Cleansers, serums, moisturisers and sunscreens. Filter by skin type, concern and ingredient."
+    },
+    "kits": {
+      "title": "Kits and savings",
+      "description": "Skincare kits with what is inside, the price against buying separately, and the saving."
+    },
+    "ingredients": {
+      "title": "Ingredient guide",
+      "description": "Plain explanations of the ingredients in our range and which products contain them."
+    },
+    "cart": {
+      "title": "Your bag",
+      "description": "Review your bag before checkout."
+    },
+    "checkout": {
+      "title": "Checkout",
+      "description": "Send your order request. Pay on delivery or by bank transfer."
+    },
+    "confirmation": {
+      "title": "Order request received",
+      "description": "Your order request has been received."
+    },
+    "delivery": {
+      "title": "Delivery and returns",
+      "description": "Delivery in Ulaanbaatar, cargo to the countryside, store pickup, fees, timing and returns."
+    },
+    "faq": {
+      "title": "Questions and answers",
+      "description": "Answers about routines, ingredients, delivery, payment and returns."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Call, message on Messenger or visit the shop."
+    },
+    "credits": {
+      "title": "Credits",
+      "description": "Where the product information and photographs come from."
+    },
+    "notfound": {
+      "title": "Page not found",
+      "description": "This page does not exist."
+    },
+    "dev": {
+      "title": "Font test",
+      "description": "Development page."
+    }
+  },
+  "a11y": {
+    "skip": "Skip to main content",
+    "primary": "Main navigation",
+    "footer": "Footer navigation",
+    "language": "Language",
+    "close": "Close",
+    "openBag": "Open bag, {count} items",
+    "breadcrumb": "Breadcrumb",
+    "filters": "Product filters",
+    "results": "Results",
+    "quickView": "Quick view of {name}",
+    "prevSlide": "Previous",
+    "nextSlide": "Next",
+    "prevProducts": "Previous products",
+    "nextProducts": "Next products",
+    "addToBag": "Add {name} to bag",
+    "addedToBag": "{name} added to bag",
+    "soldOutName": "{name}, out of stock",
+    "routineToggle": "Choose morning or evening routine",
+    "decrease": "Decrease quantity of {name}",
+    "increase": "Increase quantity of {name}",
+    "remove": "Remove {name} from bag",
+    "quantity": "Quantity of {name}",
+    "home": "{name} home page",
+    "menu": "Menu",
+    "bagDialog": "Your bag",
+    "mapFrame": "Map"
+  },
+  "common": {
+    "home": "Home",
+    "add": "Add to bag",
+    "added": "Added to bag",
+    "soldOut": "Out of stock",
+    "size": "Size",
+    "viewDetails": "View details",
+    "sourceLabel": "Product information from",
+    "sourceLink": "original product page",
+    "clear": "Clear all",
+    "quickView": "Quick view",
+    "viewBag": "View bag",
+    "close": "Close",
+    "filterAll": "All",
+    "addShort": "Add"
+  },
+  "promo": "Free delivery in Ulaanbaatar on orders from {amount}",
+  "nav": {
+    "shop": "Shop",
+    "categories": "Categories",
+    "routine": "Routine",
+    "kits": "Kits",
+    "ingredients": "Ingredients",
+    "faq": "FAQ",
+    "bag": "Bag"
+  },
+  "hero": {
+    "title": "Skincare for long, dry winters",
+    "sub": "Clear routines and honest ingredients for cold wind, dry heating and strong sun at altitude.",
+    "cta": "Browse the shop",
+    "facts": {
+      "delivery": "Free delivery in Ulaanbaatar from {amount}",
+      "payment": "Pay on delivery or by bank transfer",
+      "pickup": "Free pickup from the shop in Sukhbaatar district"
+    },
+    "featured": "Featured product",
+    "badges": {
+      "delivery": "Delivery across Mongolia",
+      "pay": "Pay on delivery",
+      "pickup": "Store pickup"
+    }
+  },
+  "perks": {
+    "one": "Delivery in Ulaanbaatar and by cargo across Mongolia",
+    "two": "Pay on delivery or by bank transfer",
+    "three": "Return unopened items within 7 days",
+    "four": "Patch test tips on every product page"
+  },
+  "categories": {
+    "title": "Start with the step you need",
+    "intro": "Four steps cover most routines. Pick one and see what fits.",
+    "cleanse": {
+      "name": "Cleanse",
+      "text": "Gel, oil and toner to start and reset the skin."
+    },
+    "treat": {
+      "name": "Serums",
+      "text": "Serums for tone, texture, calm and the eye area."
+    },
+    "moisturise": {
+      "name": "Moisturise",
+      "text": "Essence and cream to hold water in against dry air."
+    },
+    "protect": {
+      "name": "Protect",
+      "text": "Daily SPF50+ for sun, snow glare and altitude."
+    },
+    "browse": "Browse {name}"
+  },
+  "routine": {
+    "title": "A simple routine for a cold climate",
+    "intro": "Choose morning or evening. Each step shows what to use, why, and a note for the weather.",
+    "am": "Morning",
+    "pm": "Evening",
+    "step": "Step {n}",
+    "total": "Routine total",
+    "addAll": "Add this routine to bag",
+    "added": "Routine added to bag",
+    "roles": {
+      "cleanse": "Cleanse",
+      "tone": "Prepare",
+      "treat": "Serum",
+      "moisturise": "Moisturise",
+      "protect": "Protect"
+    },
+    "tip": "New to a product? Test a small amount on the inner arm for 24 hours first."
+  },
+  "ingredientsSection": {
+    "title": "Ingredients, explained",
+    "intro": "We list what each ingredient is, why it is used and who should take care. No promises beyond that.",
+    "all": "See the full ingredient guide"
+  },
+  "kitsSection": {
+    "title": "Kits and savings",
+    "intro": "Every kit shows what is inside and how much it saves against buying each item alone.",
+    "all": "See all kits"
+  },
+  "shop": {
+    "title": "Shop",
+    "intro": "Filter by what matters for your skin.",
+    "count": "{n} products",
+    "countOne": "1 product",
+    "none": "No products match these filters. Clear a filter to see more.",
+    "category": "Category",
+    "skinType": "Skin type",
+    "concern": "Concern",
+    "ingredient": "Ingredient",
+    "sort": "Sort",
+    "sortOptions": {
+      "featured": "Featured",
+      "priceAsc": "Price, low to high",
+      "priceDesc": "Price, high to low",
+      "nameAsc": "Name, A to Z"
+    },
+    "openFilters": "Filters",
+    "showResults": "Show products",
+    "all": "All",
+    "cats": {
+      "cleanse": "Cleanse",
+      "treat": "Serums",
+      "moisturise": "Moisturise",
+      "protect": "Protect"
+    },
+    "skin": {
+      "dry": "Dry",
+      "normal": "Normal",
+      "oily": "Oily",
+      "combination": "Combination",
+      "sensitive": "Sensitive"
+    },
+    "concerns": {
+      "dryness": "Dryness",
+      "dullness": "Dull tone",
+      "sensitivity": "Sensitivity",
+      "texture": "Texture",
+      "sun": "Sun protection",
+      "eyes": "Eye area"
+    }
+  },
+  "product": {
+    "howTo": "How to use",
+    "keyIngredients": "Key ingredients",
+    "fullList": "Full ingredient list",
+    "fullListMissing": "We have not copied the full list here. Read it on the original product page.",
+    "suitedFor": "Suited to",
+    "concerns": "Good for",
+    "patchTitle": "Patch test first",
+    "patchText": "Apply a small amount to the inner arm for 24 hours before using a new product on your face.",
+    "retinoidTitle": "Pregnant or breastfeeding",
+    "retinoidText": "Ask your doctor before using products with retinoids.",
+    "routineTitle": "Where it fits",
+    "inKits": "Also in these kits",
+    "related": "More from the same step",
+    "gallery": "Product photos",
+    "stockLimit": "You have the most we can supply in your bag."
+  },
+  "kit": {
+    "inside": "What is inside",
+    "separate": "Buying separately",
+    "kitPrice": "Kit price",
+    "saving": "You save {amount}",
+    "addKit": "Add kit to bag"
+  },
+  "ing": {
+    "what": "What it is",
+    "why": "Why it is used",
+    "care": "Good to know",
+    "contains": "Products with this ingredient",
+    "shopWith": "Shop products with {name}",
+    "none": "No products with this ingredient yet.",
+    "disclaimer": "General information about cosmetic ingredients. It is not medical advice."
+  },
+  "cart": {
+    "title": "Your bag",
+    "empty": "Your bag is empty.",
+    "emptyCta": "Browse the shop",
+    "subtotal": "Subtotal",
+    "delivery": "Delivery",
+    "deliveryFree": "Free",
+    "deliveryEstimate": "Delivery in Ulaanbaatar: {fee}, usually {min} to {max} days",
+    "progress": "Add {amount} more for free delivery in Ulaanbaatar",
+    "progressDone": "You have free delivery in Ulaanbaatar",
+    "viewBag": "View bag",
+    "checkout": "Go to checkout",
+    "item": "Item",
+    "price": "Price",
+    "lineTotal": "Total",
+    "remove": "Remove",
+    "kit": "Kit",
+    "continue": "Continue shopping"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "intro": "This is a demo. No payment is taken and no real order is placed.",
+    "contact": "Your details",
+    "name": "Full name",
+    "phone": "Phone number",
+    "phoneHint": "For example 9911 2233 or +976 9911 2233",
+    "deliveryTitle": "How should we deliver?",
+    "ub": "Ulaanbaatar address",
+    "ubText": "To your door, {days} days",
+    "countryside": "Countryside by cargo",
+    "countrysideText": "To the nearest cargo terminal, {days} days",
+    "pickup": "Pick up from the shop",
+    "pickupText": "Free, ready in {days} days",
+    "district": "District",
+    "districtPlaceholder": "Choose a district",
+    "khoroo": "Khoroo",
+    "building": "Building",
+    "door": "Door or apartment",
+    "terminal": "Province and cargo terminal",
+    "terminalHint": "For example Darkhan, Erdenet cargo terminal",
+    "notes": "Notes for the courier",
+    "optional": "optional",
+    "paymentTitle": "How do you want to pay?",
+    "cod": "Pay on delivery",
+    "codText": "Cash or card to the courier",
+    "transfer": "Bank transfer",
+    "transferText": "We will send bank details by phone",
+    "summary": "Order summary",
+    "total": "Total",
+    "submit": "Send order request",
+    "sending": "Sending your order request",
+    "errorSummary": "Check these fields",
+    "serverError": "We could not send the order request. Check your connection and try again.",
+    "rateLimited": "Too many requests from this device. Try again in a minute.",
+    "empty": "Your bag is empty, so there is nothing to send.",
+    "free": "Free"
+  },
+  "errors": {
+    "name": "Enter your full name",
+    "phone": "Enter 8 digits, for example 9911 2233",
+    "district": "Choose a district",
+    "khoroo": "Enter the khoroo number, 1 or 2 digits",
+    "building": "Enter the building number",
+    "terminal": "Enter the province and cargo terminal",
+    "lines": "Add at least one item to your bag",
+    "payment": "Choose how you want to pay",
+    "email": "Enter an email like name{'@'}example.com"
+  },
+  "confirmation": {
+    "title": "Order request received",
+    "number": "Order number {number}",
+    "text": "We would call {phone} to confirm the order. This is a demo, so nobody will call.",
+    "when": "Sent on {date} at {time}",
+    "next": "What happens next",
+    "step1": "We confirm items and delivery by phone.",
+    "step2": "You pay on delivery or by bank transfer, as you chose.",
+    "step3": "We deliver or prepare your pickup.",
+    "none": "There is no recent order on this device.",
+    "home": "Back to the home page"
+  },
+  "instagram": {
+    "title": "Follow us on Instagram",
+    "open": "Open Instagram"
+  },
+  "closing": {
+    "title": "Start with the routine",
+    "text": "Four steps for a cold, dry winter, added to your bag in one tap. Free delivery in Ulaanbaatar on orders from {amount}.",
+    "cta": "See the routine"
+  },
+  "newsletter": {
+    "title": "One skin note a month",
+    "text": "You will get one email a month with a routine tip and new arrivals. Nothing else, and you can unsubscribe in any email.",
+    "label": "Email address",
+    "submit": "Subscribe",
+    "sending": "Subscribing",
+    "success": "Thanks. You are on the list. This is a demo, so no email will be sent.",
+    "error": "We could not subscribe you. Check your connection and try again."
+  },
+  "delivery": {
+    "title": "Delivery and returns",
+    "intro": "Three ways to receive your order. Fees and timing below match the checkout.",
+    "ub": {
+      "title": "Ulaanbaatar",
+      "text": "Delivered to your door in {min} to {max} days. The fee is {fee}. Orders from {amount} ship free."
+    },
+    "countryside": {
+      "title": "Countryside by cargo",
+      "text": "We hand your parcel to a cargo company that delivers to the terminal in your province in {min} to {max} days. Our handling fee is {fee}. The cargo company's own fee is paid when you collect the parcel."
+    },
+    "pickup": {
+      "title": "Pickup from the shop",
+      "text": "Free. We will call when your order is ready, usually within {max} days."
+    },
+    "returnsTitle": "Returns",
+    "returns": "You can return unopened items in their original packaging within 7 days of receiving them. Call us first and we will tell you where to bring the parcel. Opened skincare cannot be returned for hygiene reasons.",
+    "paymentTitle": "Payment",
+    "payment": "Pay in cash or by card to the courier, or by bank transfer after we confirm your order by phone."
+  },
+  "faq": {
+    "title": "Questions and answers",
+    "intro": "Short answers. Call us if yours is not here.",
+    "q1": "Where should I start if I have never had a routine?",
+    "a1": "Start with three steps: a gentle cleanser, one moisturiser and a sunscreen in the morning. Add a serum after a few weeks, once your skin is comfortable.",
+    "q2": "Why do I need sunscreen in winter?",
+    "a2": "Mongolia is high and the air is thin, so UV is strong. Snow reflects it back onto your face. Wear sunscreen on cloudy days as well.",
+    "q3": "My skin feels tight indoors. What helps?",
+    "a3": "Heating dries the air. Wash with lukewarm water, apply essence on damp skin, then a cream. Do not go outside straight after washing.",
+    "q4": "How do I patch test?",
+    "a4": "Put a small amount on the inner arm and leave it for 24 hours. If you see redness or itching, do not use the product on your face.",
+    "q5": "Can I use retinoids while pregnant or breastfeeding?",
+    "a5": "Ask your doctor first. Our eye serum contains retinal, which is a retinoid, so check with your doctor before using it.",
+    "q6": "How often should I use the acid toner?",
+    "a6": "Start with 2 to 3 evenings a week. If your skin feels fine, you can use it more. Always wear sunscreen the next day.",
+    "q7": "How long does delivery take?",
+    "a7": "Ulaanbaatar takes {ubMin} to {ubMax} days. Countryside cargo takes {csMin} to {csMax} days to the terminal. Pickup is ready within {puMax} days.",
+    "q8": "When is delivery free?",
+    "a8": "Delivery to a Ulaanbaatar address is free for orders from {amount}. Below that it costs {fee}. Pickup is always free.",
+    "q9": "How do I pay?",
+    "a9": "Pay on delivery or by bank transfer. We never ask for card details on this site.",
+    "q10": "Can I return a product?",
+    "a10": "Yes, unopened items within 7 days. Opened skincare cannot be returned for hygiene reasons.",
+    "q11": "Are the products and photos real?",
+    "a11": "This is a demo shop. Product names, descriptions and photographs come from the brand pages listed on the credits page. Prices, stock and delivery terms are made up, and no real order is taken."
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "The quickest way to reach us is a call or a Messenger message.",
+    "call": "Call",
+    "message": "Message on Messenger",
+    "hours": "Opening hours",
+    "address": "Address",
+    "email": "Email",
+    "map": "Map",
+    "showMap": "Show map",
+    "mapNote": "The map loads from OpenStreetMap only after you press the button.",
+    "mapTitle": "Map of the shop location"
+  },
+  "credits": {
+    "title": "Credits",
+    "intro": "Product names, descriptions and photographs on this demo come from the brand pages below and belong to their owners. They are used to show a store design to a client and are not for sale or redistribution.",
+    "product": "Product",
+    "source": "Source",
+    "fonts": "Fonts",
+    "fontsText": "Manrope, licensed under the SIL Open Font License 1.1.",
+    "name": "The name Sora is a placeholder chosen by the owner. It is also the name of an AI video product, so check the name before real use.",
+    "sky": "Hero sky photograph \"Blue sky with wispy clouds\" by ProjectManhattan, from Wikimedia Commons, licensed CC BY-SA 3.0. Resized, cropped and darkened for the hero, and shared under the same licence.",
+    "photos": "Photos",
+    "skyLink": "Source and licence"
+  },
+  "notfound": {
+    "title": "This page does not exist",
+    "text": "The link may be old or mistyped.",
+    "cta": "Go to the home page"
+  },
+  "footer": {
+    "text": "A demo skincare shop for Mongolia, in Mongolian and English.",
+    "shop": "Shop",
+    "help": "Help",
+    "company": "Contact",
+    "demo": "Demo site by",
+    "disclaimer": "Demo store. No real orders are taken."
+  },
+  "dev": {
+    "fontTitle": "Font test",
+    "fontText": "Өө Үү Нэг хоёр гурав"
+  },
+  "scene": {
+    "title": "Three products to start with",
+    "sub": "Cleanse, add a serum, protect. Add any of them to your bag."
+  }
+}
