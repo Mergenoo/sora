@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { delivery } from '~/content/config'
-import { products, productBySlug } from '~/content/products'
+import { products } from '~/content/products'
 import { kits } from '~/content/kits'
 import { ingredients } from '~/content/ingredients'
 import type { Category } from '~/content/types'
@@ -11,9 +11,9 @@ const cart = useCart()
 useSeo({ titleKey: 'home' })
 
 const amount = computed(() => formatMnt(delivery.freeThresholdMnt))
-const featured = productBySlug('glow-serum-propolis-niacinamide')!
-const feat = featured.images[0]
-const addFeatured = () => { cart.add('product', featured.slug); cart.announce.value = `${featured.name}: ${t('common.added')}` }
+const featured = kits.find((k) => k.slug === 'evening-trio') ?? kits[0]!
+const feat = featured.image
+const addFeatured = () => { cart.add('kit', featured.slug); cart.announce.value = `${l(featured.name)}: ${t('common.added')}` }
 
 const cat = ref<'all' | Category>('all')
 const chips: ('all' | Category)[] = ['all', 'cleanse', 'treat', 'moisturise', 'protect']
@@ -111,10 +111,10 @@ const badges = ['delivery', 'pay', 'pickup'] as const
           <div class="scene-card mt-8 flex justify-center md:mt-10 lg:mt-0">
             <article class="hero-card glass w-full max-w-[520px] overflow-hidden !rounded-b-none border-b-0 px-4 pt-4" :aria-label="t('hero.featured')">
               <div class="card-img overflow-hidden rounded-[28px]">
-                <NuxtPicture :src="feat.src" :alt="l(feat.alt)" :width="feat.width" :height="feat.height" sizes="xs:360px sm:480px" loading="eager" :img-attrs="{ class: 'aspect-[16/10] w-full object-cover' }" />
+                <NuxtPicture :src="feat.src" :alt="l(feat.alt)" :width="feat.width" :height="feat.height" sizes="xs:360px sm:480px" loading="eager" :img-attrs="{ class: 'aspect-[16/10] w-full object-cover object-[50%_36%]' }" />
               </div>
               <div class="card-info relative z-10 -mt-14 rounded-[24px] bg-surface/90 p-3 text-center text-ink backdrop-blur">
-                <p class="text-[15px] font-semibold">{{ featured.name }} <span class="text-muted">{{ featured.size }}</span></p>
+                <p class="text-[15px] font-semibold">{{ l(featured.name) }}</p>
                 <p class="text-[clamp(1.75rem,1.2rem+2vw,2.25rem)] font-extrabold tracking-tight">{{ formatMnt(featured.priceMnt) }}</p>
                 <button type="button" class="btn btn-primary mt-2 !min-h-[44px]" @click="addFeatured">{{ t('common.add') }}</button>
               </div>

@@ -213,8 +213,17 @@ Square. Buttons, inputs, chips, cards, panels, dialogs, product images and the l
 - **Focus:** the global 3px amber outline with 3px offset.
 - **Error:** border turns Alert Red with a short red message beneath.
 
+### Shop filters
+The sidebar (and the phone sheet) scrolls on its own when taller than the screen. After the product filters comes an open "Иж бүрдэл" group that links to each kit on the kits page.
+
+### Dropdown (`SelectMenu`)
+A custom listbox replaces the browser's native popup for the shop sort. The trigger is an `.input` button with a chevron that flips when open. The menu is a white panel under the same 1.5px grey border as the trigger (ink at 40%, no shadow) aligned to the trigger's right edge. Options are 48px rows; the highlighted row is Sky Tint, the selected one is bold with a check. Keyboard: Up/Down/Home/End move, Enter or Space picks, Esc closes and returns focus, typing jumps to a match, Tab closes. Other forms still use native selects.
+
+### Joined field
+The newsletter input and its button share one 52px row and one 3px amber focus ring drawn around both (`joined-field`).
+
 ### Navigation
-Three links only: Shop, Categories, Kits. The header is transparent over the sky hero (home, scrolled to the top) with white text; once the page scrolls, and on every other page, it turns solid white with a soft bottom shadow (`0 2px 14px rgb(0 0 0 / .09)`) and ink text. Its controls are minimal and borderless: a text language switch ("MH / EN", the current language bold and underlined), a thin shopping-bag icon with the item count beside it as plain bold text (no circle, no badge), and on phones a plain underlined "Menu" word. No pills, fills or circles. It overlaps the top 72px of the hero.
+Two links only: Shop and Kits. The shop page also lists the kits below the products (when no filter is active). The header is transparent over the sky hero (home, scrolled to the top) with white text; once the page scrolls, and on every other page, it turns solid white with a soft bottom shadow (`0 2px 14px rgb(0 0 0 / .09)`) and ink text. The wordmark and the two links share one text baseline (the links are nudged up 2.5px to match the Cormorant metrics) and are set in the heading serif (Cormorant, links 20px, wordmark 2.25rem semibold); the controls on the right (language switch, bag count, Menu) stay in Manrope at 14px. Its controls are minimal and borderless: a text language switch ("MH / EN", the current language bold and underlined), a thin shopping-bag icon with the item count beside it as plain bold text (no circle, no badge), and on phones a plain underlined "Menu" word. No pills, fills or circles. It overlaps the top 72px of the hero.
 
 ### Section layouts (below the shop)
 Taken from `docs/reference/products-section-nuori.webp`; the hero and the shop carousel keep their own layouts.

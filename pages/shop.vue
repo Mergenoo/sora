@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { products } from '~/content/products'
 import { ingredients } from '~/content/ingredients'
+import { kits } from '~/content/kits'
 import type { Category, Concern, SkinType } from '~/content/types'
 const { t, locale } = useI18n()
 const { l } = useCatalog()
+const localePath = useLocalePath()
 const route = useRoute()
 const router = useRouter()
 useSeo({ titleKey: 'shop' })
@@ -30,6 +32,9 @@ const list = computed(() => {
   else if (f.sort === 'nameAsc') out = [...out].sort((a, b) => a.name.localeCompare(b.name, locale.value === 'mn' ? 'mn' : 'en'))
   return out
 })
+const sortOptions = computed(() => (['featured', 'priceAsc', 'priceDesc', 'nameAsc'] as const).map((o) => ({ value: o, label: t(`shop.sortOptions.${o}`) })))
+const setSort = (v: string) => { router.replace({ query: { ...route.query, sort: v === 'featured' ? undefined : v } }) }
+const kitLinks = computed(() => kits.map((k) => ({ slug: k.slug, name: l(k.name), to: localePath('/kits') + '#' + k.slug })))
 const activeCount = computed(() => [q.value.cat, q.value.skin, q.value.concern, q.value.ing].filter(Boolean).length)
 const countText = computed(() => (list.value.length === 1 ? t('shop.countOne') : t('shop.count', { n: list.value.length })))
 
@@ -45,8 +50,8 @@ const closeSheet = () => { if (sheet.value?.open) sheet.value.close(); sheetOpen
     <p class="mt-2 text-muted">{{ t('shop.intro') }}</p>
 
     <div class="mt-8 grid items-start gap-8 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-10">
-      <aside class="card hidden h-fit p-5 lg:sticky lg:top-24 lg:block" :aria-label="t('a11y.filters')">
-        <ShopFilters :groups="groups" :q="q" @set="setQ" @clear="clear" />
+      <aside class="card hidden h-fit p-5 lg:sticky lg:top-24 lg:block lg:max-h-[calc(100dvh-8rem)] lg:overflow-y-auto [scrollbar-width:thin]" :aria-label="t('a11y.filters')">
+        <ShopFilters :groups="groups" :q="q" :kits="kitLinks" @set="setQ" @clear="clear" />
       </aside>
 
       <div>
@@ -55,22 +60,27 @@ const closeSheet = () => { if (sheet.value?.open) sheet.value.close(); sheetOpen
           <div class="flex flex-wrap items-center gap-3">
             <button type="button" class="btn btn-ghost !min-h-[44px] lg:hidden" @click="openSheet">{{ t('shop.openFilters') }}<span v-if="activeCount" aria-hidden="true"> ({{ activeCount }})</span></button>
             <div class="field !grid-flow-col items-center !gap-2">
-              <label for="sort" class="!font-semibold">{{ t('shop.sort') }}</label>
-              <select id="sort" class="input !w-auto" :value="q.sort" @change="router.replace({ query: { ...route.query, sort: ($event.target as HTMLSelectElement).value === 'featured' ? undefined : ($event.target as HTMLSelectElement).value } })">
-                <option v-for="o in ['featured', 'priceAsc', 'priceDesc', 'nameAsc']" :key="o" :value="o">{{ t(`shop.sortOptions.${o}`) }}</option>
-              </select>
+              <span id="sort-label" class="font-semibold">{{ t('shop.sort') }}</span>
+              <SelectMenu id="sort" labelledby="sort-label" :model-value="q.sort" :options="sortOptions" @update:model-value="setSort" />
             </div>
           </div>
         </div>
         <ProductGrid v-if="list.length" :items="list" :priority-count="2" dense />
         <div v-else class="card grid gap-3 p-6"><p>{{ t('shop.none') }}</p><div><button type="button" class="btn btn-primary" @click="clear">{{ t('common.clear') }}</button></div></div>
+        <section v-if="!activeCount && kits.length" id="kits" class="mt-16" aria-labelledby="shop-kits-title">
+          <h2 id="shop-kits-title">{{ t('kitsSection.title') }}</h2>
+          <p class="mt-3 max-w-[52ch] text-lg text-muted">{{ t('kitsSection.intro') }}</p>
+          <div class="mt-8 grid gap-6 xl:grid-cols-2">
+            <KitCard v-for="k in kits" :key="k.slug" :kit="k" :heading-level="3" />
+          </div>
+        </section>
       </div>
     </div>
 
     <dialog ref="sheet" class="sheet m-auto mb-0 w-full max-w-lg" :aria-label="t('a11y.filters')" @cancel.prevent="closeSheet" @close="closeSheet">
       <div class="max-h-[85dvh] overflow-y-auto p-5">
         <div class="mb-4 flex items-center justify-between"><h2 class="!text-xl">{{ t('shop.openFilters') }}</h2><button type="button" class="btn btn-ghost !min-h-[44px] !px-3" @click="closeSheet">{{ t('common.close') }}</button></div>
-        <ShopFilters :groups="groups" :q="q" @set="setQ" @clear="clear" />
+        <ShopFilters :groups="groups" :q="q" :kits="kitLinks" @set="setQ" @clear="clear" />
         <button type="button" class="btn btn-primary mt-6 w-full" @click="closeSheet">{{ t('shop.showResults') }} ({{ list.length }})</button>
       </div>
     </dialog>

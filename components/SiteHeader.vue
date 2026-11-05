@@ -28,7 +28,6 @@ watch(() => route.fullPath, () => { menu.value = false })
 const onEsc = () => { if (menu.value) { menu.value = false; toggle.value?.focus() } }
 const links = computed(() => [
   { to: localePath('/shop'), label: t('nav.shop') },
-  { to: localePath('/') + '#shop', label: t('nav.categories') },
   { to: localePath('/kits'), label: t('nav.kits') }
 ])
 </script>
@@ -44,16 +43,18 @@ const links = computed(() => [
     @focusin="hidden = false"
   >
     <div class="wrap flex h-[72px] items-center gap-4">
-      <NuxtLink :to="localePath('/')" class="inline-flex min-h-[44px] items-center text-3xl font-extrabold tracking-tight no-underline" :aria-label="t('a11y.home', { name: business.name })">
+      <div class="flex min-w-0 flex-1 items-baseline gap-4">
+      <NuxtLink :to="localePath('/')" class="inline-flex min-h-[44px] items-center font-serif text-4xl font-semibold leading-none tracking-tight no-underline" :aria-label="t('a11y.home', { name: business.name })">
         {{ business.name.toLowerCase() }}
       </NuxtLink>
-      <nav :aria-label="t('a11y.primary')" class="ml-4 hidden flex-1 lg:block">
-        <ul class="flex items-center gap-1">
-          <li v-for="l in links" :key="l.label">
-            <NuxtLink :to="l.to" class="inline-flex min-h-[44px] items-center px-3 text-label font-semibold no-underline hover:underline">{{ l.label }}</NuxtLink>
+      <nav :aria-label="t('a11y.primary')" class="ml-4 hidden lg:block">
+        <ul class="flex items-baseline gap-1 -translate-y-[2.5px]">
+          <li v-for="l in links" :key="l.label" class="flex">
+            <NuxtLink :to="l.to" class="inline-flex min-h-[44px] items-center px-3 font-serif text-xl font-semibold no-underline hover:underline">{{ l.label }}</NuxtLink>
           </li>
         </ul>
       </nav>
+      </div>
       <div class="ml-auto flex items-center gap-2">
         <LangSwitch />
         <NuxtLink
@@ -73,7 +74,7 @@ const links = computed(() => [
     <nav v-show="menu" id="mobile-nav" :aria-label="t('a11y.primary')" class="mx-4 mb-3 border border-line bg-surface p-2 lg:hidden">
       <ul class="grid">
         <li v-for="l in links" :key="l.label">
-          <NuxtLink :to="l.to" class="flex min-h-[48px] items-center px-4 text-base font-semibold no-underline">{{ l.label }}</NuxtLink>
+          <NuxtLink :to="l.to" class="flex min-h-[48px] items-center px-4 font-serif text-xl font-semibold no-underline">{{ l.label }}</NuxtLink>
         </li>
       </ul>
     </nav>

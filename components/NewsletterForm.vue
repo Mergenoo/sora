@@ -23,7 +23,7 @@ const submit = async () => {
   <form class="grid gap-3" novalidate @submit.prevent="submit">
     <div class="field">
       <label for="nl-email">{{ t('newsletter.label') }}</label>
-      <div class="flex">
+      <div class="joined-field flex items-stretch">
         <input id="nl-email" v-model="email" class="input min-w-0 flex-1 !border-r-0" type="email" inputmode="email" autocomplete="email" :aria-invalid="invalid" :aria-describedby="invalid ? 'nl-err' : 'nl-hint'" required>
         <button class="btn btn-primary" type="submit" :disabled="state === 'sending'">{{ state === 'sending' ? t('newsletter.sending') : t('newsletter.submit') }}</button>
       </div>
